@@ -1,0 +1,9 @@
+.container{
+    margin-top: 50px;   
+}
+.col{
+    padding: 100px;
+}
+.card-header{
+    background-color: rgb(189, 75, 75);
+}

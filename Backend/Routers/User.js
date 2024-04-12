@@ -1,17 +1,27 @@
 const express = require('express');
 const router = express.Router();
-const model = require('../Models/User');
+const Model = require('../Models/User');
 
 router.post('/add', (req,res)=>{
     console.log(req.body);
-
     //storing data to monogoDB
-    new model(req.body).save()
+    new Model(req.body).save()
     .then((result) => {
         res.json(result)
     }).catch((err) => {
         console.log(err)
         res.status(500).json(err)
+    });
+});
+
+router.post('/authenticate', (req,res) => {
+    Model.findOne(req.body)
+    .then((result) => {
+        if (result) res.json(result);
+        else res.status(400).json({message: 'login failed'});
+    }).catch((err) => {
+        console.log(err);
+        res.status(500).json(err);
     });
 });
 

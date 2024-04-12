@@ -1,14 +1,19 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-
+import React from 'react';
+import { enqueueSnackbar } from 'notistack';
 
 const Home = () => {
+  
+
+  const handleButtonClick = () => {
+    enqueueSnackbar('su !')
+  };
+
   return (
     <div>
-        <h1>Hello world!</h1>
-        <Link to='/Signup'>Signup</Link>
+      Home
+      <button onClick={handleButtonClick}>CLICK</button>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
