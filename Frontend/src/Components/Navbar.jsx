@@ -1,5 +1,6 @@
 import React from "react";
 import {Link} from 'react-router-dom';
+import UserProfil from "./UserProfil";
 
 const Navbar = () => {
   return (
@@ -48,6 +49,7 @@ const Navbar = () => {
                 </Link>
               </li>
             </ul>
+            <div className="p-3">
             <form className="d-flex" role="search">
               <input
                 className="form-control form-control-sm me-2"
@@ -59,7 +61,8 @@ const Navbar = () => {
                 Search
               </button>
             </form>
-            <h6 className="d-flex ">photo</h6>
+            </div>
+            <h6 className="p-4"><Link to="UserProfil">UserIcon</Link></h6>
           </div>
         </div>
       </nav>
