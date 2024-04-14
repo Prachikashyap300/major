@@ -42,6 +42,11 @@ const Navbar = () => {
                   Contact
                 </Link>
               </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/ManageUser">
+                  ManageUser
+                </Link>
+              </li>
             </ul>
             <form className="d-flex" role="search">
               <input

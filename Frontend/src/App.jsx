@@ -6,6 +6,7 @@ import Signup from './Components/Signup'
 import Navbar from './Components/Navbar'
 import Login from './Components/Login'
 import Contact from './Components/Contact'
+import ManageUser from './Components/ManageUser'
 
 
 const App = () => {
@@ -20,6 +21,7 @@ const App = () => {
                 <Route path='/Signup' element={<Signup/>}/>
                 <Route path='/Login' element={<Login/>}/>
                 <Route path='/Contact' element={<Contact/>}/>
+                <Route path='/ManageUser' element={<ManageUser/>}/>
             </Routes>
         </BrowserRouter>
         </SnackbarProvider>

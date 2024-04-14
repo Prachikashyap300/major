@@ -50,9 +50,8 @@ const Signup = () => {
       });
       console.log(res.status)
       action.resetForm()
-      if(res.status)
-      action.resetForm()
-      if(res.status ===200){
+   
+      if(res.status === 200){
         enqueueSnackbar('Signup Successful', {variant: 'success'})
       }else{
         enqueueSnackbar('Signup failed', {variant: 'error'})
